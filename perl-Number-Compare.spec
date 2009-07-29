@@ -1,21 +1,21 @@
-%define module  Number-Compare
-%define name	perl-%{module}
-%define version 0.01
-%define release %mkrel 9
+%define upstream_name    Number-Compare
+%define upstream_version 0.01
 
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary: 	Numeric comparisons
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group: 		Development/Perl
-Source: 	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/%{module}-%{version}.tar.bz2
-Url:            http://search.cpan.org/dist/%{module}
+Source0:	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:        http://search.cpan.org/dist/%{upstream_name}
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch: 	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description 
 Number::Compare compiles a simple comparison to an anonymous subroutine, which
@@ -29,7 +29,7 @@ gigabytes (g, gi). Those suffixed with an i use the appropriate 2**n version in
 accordance with the IEC standard: http://physics.nist.gov/cuu/Units/binary.html
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -50,4 +50,3 @@ rm -rf %{buildroot}
 %doc Changes
 %{perl_vendorlib}/Number
 %{_mandir}/*/*
-
