@@ -4,7 +4,7 @@
 Summary:	Numeric comparisons
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	7
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/%{modname}-%{modver}.tar.bz2
