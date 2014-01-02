@@ -1,13 +1,13 @@
 %define modname	Number-Compare
-%define modver	0.01
+%define modver 0.03
 
 Summary:	Numeric comparisons
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/%{modname}-%{modver}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/Number-Compare-%{modver}.tar.gz
 Url:		http://search.cpan.org/dist/%{modname}
 BuildArch:	noarch
 BuildRequires:	perl-devel
@@ -40,4 +40,5 @@ make test
 %doc Changes
 %{perl_vendorlib}/Number
 %{_mandir}/man3/*
+
 
