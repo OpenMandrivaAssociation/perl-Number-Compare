@@ -4,13 +4,14 @@
 Summary:	Numeric comparisons
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	7
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RC/RCLAMP/Number-Compare-%{modver}.tar.gz
 Url:		http://search.cpan.org/dist/%{modname}
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRequires:  perl(Test::More)
 
 %description 
 Number::Compare compiles a simple comparison to an anonymous subroutine, which
